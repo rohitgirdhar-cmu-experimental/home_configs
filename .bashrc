@@ -239,6 +239,7 @@ export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/ashrivas/cv-libs/lib/
 # yoda scripts
 export PATH=$PATH:/home/rgirdhar/Software/yoda-scripts/
 alias get_node="qsub -X -I -l nodes=1:ppn=8,walltime=99:99:99"
+alias get_node_big="qsub -X -I -l nodes=1:ppn=8,walltime=99:99:99 -q big-mem"
 
 # for cmake
 export PATH=$PATH:/home/rgirdhar/Software/utils/cmake/bin/
@@ -249,10 +250,6 @@ export PATH=$PATH:/home/rgirdhar/Software/utils/cmake/bin/
 
 # for ispc compiler
 export PATH=$PATH:/home/rgirdhar/Software/pl/ispc/ispc-v1.8.2-linux/
-
-# for libpng/libpng++
-export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/rgirdhar/Software/utils/libpng/install/lib/
-export PATH=$PATH:/home/rgirdhar/Software/utils/libpng/install/bin/
 
 # for lapack
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/rgirdhar/Software/math/lapack/lapack-3.5.0/
@@ -286,13 +283,15 @@ export C_INCLUDE_PATH=/home/rgirdhar/Software/gpu/cudnn/:$C_INCLUDE_PATH
 export C_INCLUDE_PATH=$C_INCLUDE_PATH:/opt/glog/include/:/home/rgirdhar/Software/utils/gflags/install/include/
 export C_INCLUDE_PATH=$C_INCLUDE_PATH:/opt/atlas/st/include/:/opt/atlas/mt/include
 export C_INCLUDE_PATH=$C_INCLUDE_PATH:/home/xiaolonw/leveldb/include/:/home/xiaolonw/mdb/libraries/liblmdb
-export C_INCLUDE_PATH=$C_INCLUDE_PATH:/home/rgirdhar/Software/vision/opencv/install/include/
+export C_INCLUDE_PATH=/home/rgirdhar/Software/vision/opencv/install/include/:$C_INCLUDE_PATH
 export C_INCLUDE_PATH=$C_INCLUDE_PATH:/usr/local/cuda-6.5/include/
+export C_INCLUDE_PATH=/home/rgirdhar/Software/utils/gflags/install/include:$C_INCLUDE_PATH
 export CPLUS_INCLUDE_PATH=$CPLUS_INCLUDE_PATH:/opt/glog/include/:/home/rgirdhar/Software/utils/gflags/install/include/
 export CPLUS_INCLUDE_PATH=$CPLUS_INCLUDE_PATH:/opt/atlas/st/include/:/opt/atlas/mt/include
 export CPLUS_INCLUDE_PATH=$CPLUS_INCLUDE_PATH:/home/xiaolonw/leveldb/include/:/home/xiaolonw/mdb/libraries/liblmdb
-export CPLUS_INCLUDE_PATH=$CPLUS_INCLUDE_PATH:/home/rgirdhar/Software/vision/opencv/install/include/
+export CPLUS_INCLUDE_PATH=/home/rgirdhar/Software/vision/opencv/install/include/:$CPLUS_INCLUDE_PATH
 export CPLUS_INCLUDE_PATH=$CPLUS_INCLUDE_PATH:/usr/local/cuda-6.5/include/
+export CPLUS_INCLUDE_PATH=/home/rgirdhar/Software/utils/gflags/install/include/:$CPLUS_INCLUDE_PATH
 
 export LIBRARY_PATH=$LIBRARY_PATH:/opt/glog/lib/:/home/rgirdhar/Software/utils/gflags/install/lib/
 export LIBRARY_PATH=$LIBRARY_PATH:/home/xiaolonw/leveldb/:/home/xiaolonw/mdb/libraries/liblmdb
@@ -300,10 +299,54 @@ export LIBRARY_PATH=$LIBRARY_PATH:/home/rgirdhar/Software/vision/opencv/install/
 export PKG_CONFIG_PATH=/home/rgirdhar/Software/vision/opencv/install/lib/pkgconfig:$PKG_CONFIG_PATH 
 export LIBRARY_PATH=$LIBRARY_PATH:/opt/atlas/st/lib/:/opt/atlas/mt/lib/
 export LIBRARY_PATH=$LIBRARY_PATH:/usr/local/cuda-6.5/lib64/
+export LIBRARY_PATH=/home/rgirdhar/Software/utils/gflags/install/lib/:$LIBRARY_PATH
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/opt/glog/lib/:/home/rgirdhar/Software/utils/gflags/install/lib/
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/xiaolonw/leveldb/:/home/xiaolonw/mdb/libraries/liblmdb
-export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/rgirdhar/Software/vision/opencv/install/lib/
+export LD_LIBRARY_PATH=/home/rgirdhar/Software/vision/opencv/install/lib/:$LD_LIBRARY_PATH
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/opt/atlas/st/lib/:/opt/atlas/mt/lib/
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda-6.5/lib64/
+export LD_LIBRARY_PATH=/home/rgirdhar/Software/utils/gflags/install/lib/:$LD_LIBRARY_PATH
+
+# opencv, using this as it includes opencv-contrib
+export LIBRARY_PATH=/home/ashrivas/cv-libs/opencv/lib/:$LIBRARY_PATH
+export LD_LIBRARY_PATH=/home/ashrivas/cv-libs/opencv/lib/:$LD_LIBRARY_PATH
+export C_INCLUDE_PATH=/home/ashrivas/cv-libs/opencv/include/:$C_INCLUDE_PATH
+export CPLUS_INCLUDE_PATH=/home/ashrivas/cv-libs/opencv/include/:$CPLUS_INCLUDE_PATH
+export PKG_CONFIG_PATH=/home/ashrivas/cv-libs/opencv/lib/pkgconfig/:$PKG_CONFIG_PATH
 
 export PATH=$PATH:/usr/local/cuda-6.5/bin/
+
+alias python=ipython
+
+# for go and hub
+export GOROOT=/home/rgirdhar/Software/utils/go
+export PATH=$PATH:$GOROOT/bin/
+export PATH=$PATH:/home/rgirdhar/Software/utils/hub/
+
+# for libsodium and libzmq
+export LD_LIBRARY_PATH=/home/rgirdhar/Software/utils/libzmq/install/lib/:$LD_LIBRARY_PATH
+export LIBRARY_PATH=/home/rgirdhar/Software/utils/libzmq/install/lib/:$LIBRARY_PATH
+export INCLUDE_PATH=/home/rgirdhar/Software/utils/libzmq/install/include/:$INCLUDE_PATH
+export INCLUDE_PATH=/home/rgirdhar/Software/utils/libzmq/cppzmq/:$INCLUDE_PATH
+
+# for libhdf5
+export LD_LIBRARY_PATH=/home/rgirdhar/Software/utils/libhdf5/install/lib:$LD_LIBRARY_PATH
+export LIBRARY_PATH=/home/rgirdhar/Software/utils/libhdf5/install/lib:$LIBRARY_PATH
+export C_INCLUDE_PATH=home/rgirdhar/Software/utils/libhdf5/install/include:$C_INCLUDE_PATH
+export CPLUS_INCLUDE_PATH=home/rgirdhar/Software/utils/libhdf5/install/include:$CPLUS_INCLUDE_PATH
+
+# protobuf
+export PATH=/home/rgirdhar/Software/utils/google-protobuf/install/bin/:$PATH
+export LD_LIBRARY_PATH=/home/rgirdhar/Software/utils/google-protobuf/install/lib:$LD_LIBRARY_PATH
+export LIBRARY_PATH=/home/rgirdhar/Software/utils/google-protobuf/install/lib:$LIBRARY_PATH
+export C_INCLUDE_PATH=/home/rgirdhar/Software/utils/google-protobuf/install/include:$C_INCLUDE_PATH
+export CPLUS_INCLUDE_PATH=/home/rgirdhar/Software/utils/google-protobuf/install/include:$CPLUS_INCLUDE_PATH
+
+# autoconf/autoreconf
+export PATH=/home/rgirdhar/Software/utils/autoreconf/bin:$PATH
+
+# for intel mkl
+export LIBRARY_PATH=$LIBRARY_PATH:/share/vol1/home/ashrivas/cv-libs/intel/composer_xe_2013_sp1.0.080/mkl/lib/intel64/
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/share/vol1/home/ashrivas/cv-libs/intel/composer_xe_2013_sp1.0.080/mkl/lib/intel64/
+export C_INCLUDE_PATH=$C_INCLUDE_PATH:/share/vol1/home/ashrivas/cv-libs/intel/composer_xe_2013_sp1.0.080/mkl/include/
+export CPLUS_INCLUDE_PATH=$CPLUS_INCLUDE_PATH:/share/vol1/home/ashrivas/cv-libs/intel/composer_xe_2013_sp1.0.080/mkl/include/
