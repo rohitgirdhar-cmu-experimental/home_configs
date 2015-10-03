@@ -56,21 +56,21 @@ if [ -n "$force_color_prompt" ]; then
     fi
 fi
 
-if [ "$color_prompt" = yes ]; then
-    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
-else
-    PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
-fi
-unset color_prompt force_color_prompt
+#if [ "$color_prompt" = yes ]; then
+#    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+#else
+#    PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
+#fi
+#unset color_prompt force_color_prompt
 
 # If this is an xterm set the title to user@host:dir
-case "$TERM" in
-xterm*|rxvt*)
-    PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1"
-    ;;
-*)
-    ;;
-esac
+#case "$TERM" in
+#xterm*|rxvt*)
+#    PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1"
+#    ;;
+#*)
+#    ;;
+#esac
 
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
@@ -178,7 +178,8 @@ parse_git_branch () {
 git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/\1$(parse_git_dirty)/"
 }
  
-PS1="\[${BOLD}${CYAN}\]\u\[$BASE0\]@\[$CYAN\]\h\[$BASE0\]: \[$BLUE\]\w\[$BASE0\]\$([[ -n \$(git branch 2> /dev/null) ]] && echo \" on \")\[$YELLOW\]\$(parse_git_branch)\[$BASE0\]\n\$ \[$RESET\]"
+#PS1="\[${BOLD}${CYAN}\]\u\[$BASE0\]@\[$CYAN\]\h\[$BASE0\]: \[$BLUE\]\w\[$BASE0\]\$([[ -n \$(git branch 2> /dev/null) ]] && echo \" on \")\[$YELLOW\]\$(parse_git_branch)\[$BASE0\]\n\$ \[$RESET\]"
+PS1="\[${BOLD}${CYAN}\]\u\[$BASE0\]@\[$CYAN\]\h\[$BASE0\]: \[$BLUE\]\w\[$BASE0\]\n\$ \[$RESET\]"
 
 # for matlab binaries
 export MATLABROOT=/usr/local/MATLAB/R2014a/
@@ -350,3 +351,69 @@ export LIBRARY_PATH=$LIBRARY_PATH:/share/vol1/home/ashrivas/cv-libs/intel/compos
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/share/vol1/home/ashrivas/cv-libs/intel/composer_xe_2013_sp1.0.080/mkl/lib/intel64/
 export C_INCLUDE_PATH=$C_INCLUDE_PATH:/share/vol1/home/ashrivas/cv-libs/intel/composer_xe_2013_sp1.0.080/mkl/include/
 export CPLUS_INCLUDE_PATH=$CPLUS_INCLUDE_PATH:/share/vol1/home/ashrivas/cv-libs/intel/composer_xe_2013_sp1.0.080/mkl/include/
+
+# latest git
+export PATH=/home/rgirdhar/Software/utils/git/bin/bin/:$PATH
+
+# xclip
+export PATH=/home/rgirdhar/Software/utils/xclip/:$PATH
+
+# Autodesk FBX
+export LD_LIBRARY_PATH=/home/rgirdhar/Software/visualization/fbx/lib/gcc4/x64/release/:$LD_LIBRARY_PATH
+
+# premake
+export PATH=/home/rgirdhar/Software/utils/premake:$PATH
+
+# automake
+export PATH=/home/rgirdhar/Software/utils/automake/automake-1.15/bin/:$PATH
+export PKG_CONFIG_PATH=/home/rgirdhar/Software/utils/util-macros/install/share/pkgconfig:$PKG_CONFIG_PATH
+export ACLOCAL='aclocal -I /home/rgirdhar/Software/utils/util-macros/install/share/aclocal'
+
+# libpciaccess
+export LIBRARY_PATH=/home/rgirdhar/Software/visualization/opengl/libpciaccess/precomp/usr/lib/:$LIBRARY_PATH
+export LD_LIBRARY_PATH=/home/rgirdhar/Software/visualization/opengl/libpciaccess/precomp/usr/lib/:$LD_LIBRARY_PATH
+export C_INCLUDE_PATH=/home/rgirdhar/Software/visualization/opengl/libpciaccess/precomp/usr/include/:$C_INCLUDE_PATH
+export CPLUS_INCLUDE_PATH=/home/rgirdhar/Software/visualization/opengl/libpciaccess/precomp/usr/include/:$CPLUS_INCLUDE_PATH
+export PKG_CONFIG_PATH=/home/rgirdhar/Software/visualization/opengl/libpciaccess/precomp/usr/lib/pkgconfig:$PKG_CONFIG_PATH
+
+# libdrm
+export LIBRARY_PATH=/home/rgirdhar/Software/visualization/opengl/libdrm-2.4.65/installed/lib/:$LIBRARY_PATH
+export LD_LIBRARY_PATH=/home/rgirdhar/Software/visualization/opengl/libdrm-2.4.65/installed/lib/:$LD_LIBRARY_PATH
+export PKG_CONFIG_PATH=/home/rgirdhar/Software/visualization/opengl/libdrm-2.4.65/installed/lib/pkgconfig/:$PKG_CONFIG_PATH
+export C_INCLUDE_PATH=/home/rgirdhar/Software/visualization/opengl/libdrm-2.4.65/installed/include/:$C_INCLUDE_PATH
+export CPLUS_INCLUDE_PATH=/home/rgirdhar/Software/visualization/opengl/libdrm-2.4.65/installed/include/:$CPLUS_INCLUDE_PATH
+
+# dri3proto
+export PKG_CONFIG_PATH=/home/rgirdhar/Software/visualization/opengl/dri3proto/install/lib/pkgconfig/:$PKG_CONFIG_PATH
+export C_INCLUDE_PATH=/home/rgirdhar/Software/visualization/opengl/dri3proto/install/include/:$C_INCLUDE_PATH
+export CPLUS_INCLUDE_PATH=/home/rgirdhar/Software/visualization/opengl/dri3proto/install/include/:$CPLUS_INCLUDE_PATH
+
+# presentproto
+export PKG_CONFIG_PATH=/home/rgirdhar/Software/visualization/opengl/presentproto/install/lib/pkgconfig/:$PKG_CONFIG_PATH
+export C_INCLUDE_PATH=/home/rgirdhar/Software/visualization/opengl/presentproto/install/include/:$C_INCLUDE_PATH
+export CPLUS_INCLUDE_PATH=/home/rgirdhar/Software/visualization/opengl/presentproto/install/include/:$CPLUS_INCLUDE_PATH
+
+# xcb
+export PKG_CONFIG_PATH=/home/rgirdhar/Software/visualization/opengl/xcb-proto-1.11/install/lib/pkgconfig:$PKG_CONFIG_PATH
+export LIBRARY_PATH=/home/rgirdhar/Software/visualization/opengl/xcb-proto-1.11/install/lib/:$LIBRARY_PATH
+export LD_LIBRARY_PATH=/home/rgirdhar/Software/visualization/opengl/xcb-proto-1.11/install/lib/:$LD_LIBRARY_PATH
+export LIBRARY_PATH=/home/rgirdhar/Software/visualization/opengl/libxcb-1.11.1/install/lib/:$LIBRARY_PATH
+export LD_LIBRARY_PATH=/home/rgirdhar/Software/visualization/opengl/libxcb-1.11.1/install/lib/:$LD_LIBRARY_PATH
+export PKG_CONFIG_PATH=/home/rgirdhar/Software/visualization/opengl/libxcb-1.11.1/install/lib/pkgconfig/:$PKG_CONFIG_PATH
+export C_INCLUDE_PATH=/home/rgirdhar/Software/visualization/opengl/libxcb-1.11.1/install/include/:$C_INCLUDE_PATH
+export CPLUS_INCLUDE_PATH=/home/rgirdhar/Software/visualization/opengl/libxcb-1.11.1/install/include/:$CPLUS_INCLUDE_PATH
+
+# flex
+export LIBRARY_PATH=$LIBRARY_PATH:/home/rgirdhar/Software/utils/flex/install/lib/
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/rgirdhar/Software/utils/flex/install/lib/
+export C_INCLUDE_PATH=$C_INCLUDE_PATH:/home/rgirdhar/Software/utils/flex/install/include
+export CPLUS_INCLUDE_PATH=$CPLUS_INCLUDE_PATH:/home/rgirdhar/Software/utils/flex/install/include
+export PATH=$PATH:/home/rgirdhar/Software/utils/flex/install/bin/
+
+# libtool
+export PATH=/home/rgirdhar/Software/utils/libtool/help2man/help2man-1.47.2/install/bin/:$PATH
+export LIBRARY_PATH=/home/rgirdhar/Software/utils/libtool/help2man/help2man-1.47.2/install/lib/:$LIBRARY_PATH
+export LD_LIBRARY_PATH=/home/rgirdhar/Software/utils/libtool/help2man/help2man-1.47.2/install/lib:$LD_LIBRARY_PATH
+
+# makeinfo
+export PATH=/home/rgirdhar/Software/utils/libtool/makeinfo/texinfo-6.0/install/bin/:$PATH
