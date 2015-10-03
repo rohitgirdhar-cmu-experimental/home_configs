@@ -367,7 +367,8 @@ export PATH=/home/rgirdhar/Software/utils/premake:$PATH
 # automake
 export PATH=/home/rgirdhar/Software/utils/automake/automake-1.15/bin/:$PATH
 export PKG_CONFIG_PATH=/home/rgirdhar/Software/utils/util-macros/install/share/pkgconfig:$PKG_CONFIG_PATH
-export ACLOCAL='aclocal -I /home/rgirdhar/Software/utils/util-macros/install/share/aclocal'
+export ACLOCAL_PATH=/home/rgirdhar/Software/utils/util-macros/install/share/aclocal:$ACLOCAL_PATH
+#export ACLOCAL='aclocal -I /home/rgirdhar/Software/utils/util-macros/install/share/aclocal'
 
 # libpciaccess
 export LIBRARY_PATH=/home/rgirdhar/Software/visualization/opengl/libpciaccess/precomp/usr/lib/:$LIBRARY_PATH
@@ -417,3 +418,11 @@ export LD_LIBRARY_PATH=/home/rgirdhar/Software/utils/libtool/help2man/help2man-1
 
 # makeinfo
 export PATH=/home/rgirdhar/Software/utils/libtool/makeinfo/texinfo-6.0/install/bin/:$PATH
+
+# libtool
+export PATH=/home/rgirdhar/Software/utils/libtool/libtool/install/bin/:$PATH
+export LIBRARY_PATH=/home/rgirdhar/Software/utils/libtool/libtool/install/lib:$LIBRARY_PATH
+export LD_LIBRARY_PATH=/home/rgirdhar/Software/utils/libtool/libtool/install/lib:$LD_LIBRARY_PATH
+export C_INCLUDE_PATH=/home/rgirdhar/Software/utils/libtool/libtool/install/include/:$C_INCLUDE_PATH
+export CPLUS_INCLUDE_PATH=/home/rgirdhar/Software/utils/libtool/libtool/install/include/:$CPLUS_INCLUDE_PATH
+export ACLOCAL_PATH=/home/rgirdhar/Software/utils/libtool/libtool/install/share/aclocal:$ACLOCAL_PATH
