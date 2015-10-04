@@ -459,3 +459,9 @@ export CPLUS_INCLUDE_PATH=/home/rgirdhar/Software/visualization/libfontenc/insta
 export PKG_CONFIG_PATH=/home/rgirdhar/Software/visualization/libfontenc/install/lib/pkgconfig:$PKG_CONFIG_PATH
 export LIBRARY_PATH=/home/rgirdhar/Software/visualization/libfontenc/install/lib/:$LIBRARY_PATH
 export LD_LIBRARY_PATH=/home/rgirdhar/Software/visualization/libfontenc/install/lib/:$LD_LIBRARY_PATH
+# libXfont
+export C_INCLUDE_PATH=/home/rgirdhar/Software/visualization/libXfont/install/include:$C_INCLUDE_PATH
+export CPLUS_INCLUDE_PATH=/home/rgirdhar/Software/visualization/libXfont/install/include:$CPLUS_INCLUDE_PATH
+export LIBRARY_PATH=/home/rgirdhar/Software/visualization/libXfont/install/lib/:$LIBRARY_PATH
+export LD_LIBRARY_PATH=/home/rgirdhar/Software/visualization/libXfont/install/lib/:$LD_LIBRARY_PATH
+export PKG_CONFIG_PATH=/home/rgirdhar/Software/visualization/libXfont/install/lib/pkgconfig/:$PKG_CONFIG_PATH
