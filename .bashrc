@@ -420,9 +420,42 @@ export LD_LIBRARY_PATH=/home/rgirdhar/Software/utils/libtool/help2man/help2man-1
 export PATH=/home/rgirdhar/Software/utils/libtool/makeinfo/texinfo-6.0/install/bin/:$PATH
 
 # libtool
-export PATH=/home/rgirdhar/Software/utils/libtool/libtool/install/bin/:$PATH
-export LIBRARY_PATH=/home/rgirdhar/Software/utils/libtool/libtool/install/lib:$LIBRARY_PATH
-export LD_LIBRARY_PATH=/home/rgirdhar/Software/utils/libtool/libtool/install/lib:$LD_LIBRARY_PATH
-export C_INCLUDE_PATH=/home/rgirdhar/Software/utils/libtool/libtool/install/include/:$C_INCLUDE_PATH
-export CPLUS_INCLUDE_PATH=/home/rgirdhar/Software/utils/libtool/libtool/install/include/:$CPLUS_INCLUDE_PATH
-export ACLOCAL_PATH=/home/rgirdhar/Software/utils/libtool/libtool/install/share/aclocal:$ACLOCAL_PATH
+export PATH=/home/rgirdhar/Software/utils/libtool/libtool-2.2.6b/install/bin/:$PATH
+export LIBRARY_PATH=/home/rgirdhar/Software/utils/libtool/libtool-2.2.6b/install/lib:$LIBRARY_PATH
+export LD_LIBRARY_PATH=/home/rgirdhar/Software/utils/libtool/libtool-2.2.6b/install/lib:$LD_LIBRARY_PATH
+export C_INCLUDE_PATH=/home/rgirdhar/Software/utils/libtool/libtool-2.2.6b/install/include/:$C_INCLUDE_PATH
+export CPLUS_INCLUDE_PATH=/home/rgirdhar/Software/utils/libtool/libtool-2.2.6b/install/include/:$CPLUS_INCLUDE_PATH
+export ACLOCAL_PATH=/home/rgirdhar/Software/utils/libtool/libtool-2.2.6b/install/share/aclocal:$ACLOCAL_PATH
+
+export ACLOCAL_PATH=/usr/share/aclocal/:$ACLOCAL_PATH
+export ACLOCAL_PATH=/usr/share/aclocal-1.11/:$ACLOCAL_PATH
+
+export PATH=/home/rgirdhar/Software/utils/makedepend/makedepend-1.0.5/install/bin/:$PATH
+
+# gl
+export C_INCLUDE_PATH=/home/rgirdhar/Software/visualization/glut/include/:$C_INCLUDE_PATH
+export CPLUS_INCLUDE_PATH=/home/rgirdhar/Software/visualization/glut/include/:$CPLUS_INCLUDE_PATH
+export LIBRARY_PATH=/home/rgirdhar/Software/visualization/glut/lib/:$LIBRARY_PATH
+export LD_LIBRARY_PATH=/home/rgirdhar/Software/visualization/glut/lib/:$LD_LIBRARY_PATH
+
+# for xvfb
+export PATH=/home/rgirdhar/Software/visualization/headless/Xvfb/bin/:$PATH
+export C_INCLUDE_PATH=/home/rgirdhar/Software/visualization/fontcacheproto-0.1.3/install/include/:$C_INCLUDE_PATH
+export CPLUS_INCLUDE_PATH=/home/rgirdhar/Software/visualization/fontcacheproto-0.1.3/install/include/:$CPLUS_INCLUDE_PATH
+export PKG_CONFIG_PATH=/home/rgirdhar/Software/visualization/fontcacheproto-0.1.3/install/lib/pkgconfig:$PKG_CONFIG_PATH
+
+# fontsproto
+export C_INCLUDE_PATH=/home/rgirdhar/Software/visualization/fontsproto/install/include/:$C_INCLUDE_PATH
+export CPLUS_INCLUDE_PATH=/home/rgirdhar/Software/visualization/fontsproto/install/include/:$CPLUS_INCLUDE_PATH
+export PKG_CONFIG_PATH=/home/rgirdhar/Software/visualization/fontsproto/install/lib/pkgconfig/:$PKG_CONFIG_PATH
+# libtrans
+export C_INCLUDE_PATH=/home/rgirdhar/Software/visualization/libxtrans/install/include:$C_INCLUDE_PATH
+export CPLUS_INCLUDE_PATH=/home/rgirdhar/Software/visualization/libxtrans/install/include:$CPLUS_INCLUDE_PATH
+export ACLOCAL_PATH=/home/rgirdhar/Software/visualization/libxtrans/install/share/aclocal/:$ACLOCAL_PATH
+export PKG_CONFIG_PATH=/home/rgirdhar/Software/visualization/libxtrans/install/share/pkgconfig:$PKG_CONFIG_PATH
+# fontenc
+export C_INCLUDE_PATH=/home/rgirdhar/Software/visualization/libfontenc/install/include:$C_INCLUDE_PATH
+export CPLUS_INCLUDE_PATH=/home/rgirdhar/Software/visualization/libfontenc/install/include:$CPLUS_INCLUDE_PATH
+export PKG_CONFIG_PATH=/home/rgirdhar/Software/visualization/libfontenc/install/lib/pkgconfig:$PKG_CONFIG_PATH
+export LIBRARY_PATH=/home/rgirdhar/Software/visualization/libfontenc/install/lib/:$LIBRARY_PATH
+export LD_LIBRARY_PATH=/home/rgirdhar/Software/visualization/libfontenc/install/lib/:$LD_LIBRARY_PATH
