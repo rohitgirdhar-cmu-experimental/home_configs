@@ -438,12 +438,6 @@ export CPLUS_INCLUDE_PATH=/home/rgirdhar/Software/visualization/glut/include/:$C
 export LIBRARY_PATH=/home/rgirdhar/Software/visualization/glut/lib/:$LIBRARY_PATH
 export LD_LIBRARY_PATH=/home/rgirdhar/Software/visualization/glut/lib/:$LD_LIBRARY_PATH
 
-# for xvfb
-export PATH=/home/rgirdhar/Software/visualization/headless/Xvfb/bin/:$PATH
-export C_INCLUDE_PATH=/home/rgirdhar/Software/visualization/fontcacheproto-0.1.3/install/include/:$C_INCLUDE_PATH
-export CPLUS_INCLUDE_PATH=/home/rgirdhar/Software/visualization/fontcacheproto-0.1.3/install/include/:$CPLUS_INCLUDE_PATH
-export PKG_CONFIG_PATH=/home/rgirdhar/Software/visualization/fontcacheproto-0.1.3/install/lib/pkgconfig:$PKG_CONFIG_PATH
-
 # fontsproto
 export C_INCLUDE_PATH=/home/rgirdhar/Software/visualization/fontsproto/install/include/:$C_INCLUDE_PATH
 export CPLUS_INCLUDE_PATH=/home/rgirdhar/Software/visualization/fontsproto/install/include/:$CPLUS_INCLUDE_PATH
@@ -465,3 +459,20 @@ export CPLUS_INCLUDE_PATH=/home/rgirdhar/Software/visualization/libXfont/install
 export LIBRARY_PATH=/home/rgirdhar/Software/visualization/libXfont/install/lib/:$LIBRARY_PATH
 export LD_LIBRARY_PATH=/home/rgirdhar/Software/visualization/libXfont/install/lib/:$LD_LIBRARY_PATH
 export PKG_CONFIG_PATH=/home/rgirdhar/Software/visualization/libXfont/install/lib/pkgconfig/:$PKG_CONFIG_PATH
+
+# XVFB installation
+export PATH=$PATH:/home/rgirdhar/Software/visualization/headless/Xvfb_install/usr/X11R6/bin/
+
+# hdf5 recent
+export PATH=/home/rgirdhar/Software/utils/hdf5/hdf5-1.8.13-linux-x86_64-shared/bin/:$PATH
+export LIBRARY_PATH=/home/rgirdhar/Software/utils/hdf5/hdf5-1.8.13-linux-x86_64-shared/lib:$LIBRARY_PATH
+export LD_LIBRARY_PATH=/home/rgirdhar/Software/utils/hdf5/hdf5-1.8.13-linux-x86_64-shared/lib:$LD_LIBRARY_PATH
+export C_INCLUDE_PATH=/home/rgirdhar/Software/utils/hdf5/hdf5-1.8.13-linux-x86_64-shared/include:$C_INCLUDE_PATH
+export CPLUS_INCLUDE_PATH=/home/rgirdhar/Software/utils/hdf5/hdf5-1.8.13-linux-x86_64-shared/include:$CPLUS_INCLUDE_PATH
+
+# ImageMagick
+export PATH=/home/rgirdhar/Software/visualization/ImageMagick/install/bin/:$PATH
+export C_INCLUDE_PATH=/home/rgirdhar/Software/visualization/ImageMagick/install/include/:$C_INCLUDE_PATH
+export CPLUS_INCLUDE_PATH=/home/rgirdhar/Software/visualization/ImageMagick/install/include/:$CPLUS_INCLUDE_PATH
+export LD_LIBRARY_PATH=/home/rgirdhar/Software/visualization/ImageMagick/install/lib/:$LD_LIBRARY_PATH
+export LIBRARY_PATH=/home/rgirdhar/Software/visualization/ImageMagick/install/lib/:$LIBRARY_PATH
