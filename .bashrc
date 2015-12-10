@@ -476,3 +476,6 @@ export C_INCLUDE_PATH=/home/rgirdhar/Software/visualization/ImageMagick/install/
 export CPLUS_INCLUDE_PATH=/home/rgirdhar/Software/visualization/ImageMagick/install/include/:$CPLUS_INCLUDE_PATH
 export LD_LIBRARY_PATH=/home/rgirdhar/Software/visualization/ImageMagick/install/lib/:$LD_LIBRARY_PATH
 export LIBRARY_PATH=/home/rgirdhar/Software/visualization/ImageMagick/install/lib/:$LIBRARY_PATH
+
+# gnuplot
+export PATH=$PATH:/home/rgirdhar/Software/visualization/gnuplot/install/bin/
