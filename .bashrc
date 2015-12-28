@@ -204,6 +204,9 @@ export PATH=$PATH:~/Software/utils/htop/install/bin
 # for tmux
 export PATH=$PATH:~/Software/utils/tmux/install/bin
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:~/Software/utils/libevent/install/lib
+export LIBRARY_PATH=$LIBRARY_PATH:~/Software/utils/libevent/install/lib
+export C_INCLUDE_PATH=$C_INCLUDE_PATH:~/Software/utils/libevent/install/include
+export CPLUS_INCLUDE_PATH=$CPLUS_INCLUDE_PATH:~/Software/utils/libevent/install/include
 # for vim
 export PATH=$PATH:~/Software/utils/vim/install/usr/local/bin
 
@@ -230,7 +233,7 @@ export CPLUS_INCLUDE_PATH=/home/rgirdhar/Software/utils/boost/include/:$CPLUS_IN
 
 # added by Anaconda 2.1.0 installer
 export PATH="/home/rgirdhar/Software/pl/python/anaconda/bin:$PATH"
-export LD_LIBRARY_PATH="/home/rgirdhar/Software/pl/python/anaconda/lib:${LD_LIBRARY_PATH}"
+#export LD_LIBRARY_PATH="/home/rgirdhar/Software/pl/python/anaconda/lib:${LD_LIBRARY_PATH}"
 export LIBRARY_PATH="/home/rgirdhar/Software/pl/python/anaconda/lib:${LIBRARY_PATH}"
 export C_INCLUDE_PATH="/home/rgirdhar/Software/pl/python/anaconda/include:${C_INCLUDE_PATH}"
 export CPLUS_INCLUDE_PATH="/home/rgirdhar/Software/pl/python/anaconda/include:${CPLUS_INCLUDE_PATH}"
@@ -479,3 +482,5 @@ export LIBRARY_PATH=/home/rgirdhar/Software/visualization/ImageMagick/install/li
 
 # gnuplot
 export PATH=$PATH:/home/rgirdhar/Software/visualization/gnuplot/install/bin/
+
+
