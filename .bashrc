@@ -484,3 +484,23 @@ export LIBRARY_PATH=/home/rgirdhar/Software/visualization/ImageMagick/install/li
 export PATH=$PATH:/home/rgirdhar/Software/visualization/gnuplot/install/bin/
 
 
+
+
+. /home/rgirdhar/Software/vision/torch/torch/install/bin/torch-activate
+
+
+# openSSL
+export PATH=$PATH:/home/rgirdhar/Software/utils/openssl/install/bin/
+export C_INCLUDE_PATH=$C_INCLUDE_PATH:/home/rgirdhar/Software/utils/openssl/install/include/
+export CPLUS_INCLUDE_PATH=$CPLUS_INCLUDE_PATH:/home/rgirdhar/Software/utils/openssl/install/include/
+export LIBRARY_PATH=$LIBRARY_PATH:/home/rgirdhar/Software/utils/openssl/install/lib/
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/rgirdhar/Software/utils/openssl/install/lib/
+
+# latest g++ thanks to Xinlei
+export CC=/home/xinleic/tools/gcc/bin/gcc
+export CXX=/home/xinleic/tools/gcc/bin/g++
+export PATH=/home/xinleic/tools/gcc/bin/:$PATH
+export LIBRARY_PATH=/home/xinleic/tools/gcc/lib/:$LIBRARY_PATH
+export LD_LIBRARY_PATH=/home/xinleic/tools/gcc/lib/:$LD_LIBRARY_PATH
+export C_INCLUDE_PATH=/home/xinleic/tools/gcc/include/:$C_INCLUDE_PATH
+export CPLUS_INCLUDE_PATH=/home/xinleic/tools/gcc/include/:$CPLUS_INCLUDE_PATH
