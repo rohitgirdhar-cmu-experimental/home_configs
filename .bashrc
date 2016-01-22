@@ -201,12 +201,6 @@ eval `dircolors ~/Software/utils/dircolors/dircolors.256dark`
 ## YODA specific paths
 ### For htop
 export PATH=$PATH:~/Software/utils/htop/install/bin
-# for tmux
-export PATH=$PATH:~/Software/utils/tmux/install/bin
-export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:~/Software/utils/libevent/install/lib
-export LIBRARY_PATH=$LIBRARY_PATH:~/Software/utils/libevent/install/lib
-export C_INCLUDE_PATH=$C_INCLUDE_PATH:~/Software/utils/libevent/install/include
-export CPLUS_INCLUDE_PATH=$CPLUS_INCLUDE_PATH:~/Software/utils/libevent/install/include
 # for vim
 export PATH=$PATH:~/Software/utils/vim/install/usr/local/bin
 
@@ -349,14 +343,6 @@ export LIBRARY_PATH=/home/rgirdhar/Software/utils/libhdf5/install/lib:$LIBRARY_P
 export C_INCLUDE_PATH=home/rgirdhar/Software/utils/libhdf5/install/include:$C_INCLUDE_PATH
 export CPLUS_INCLUDE_PATH=home/rgirdhar/Software/utils/libhdf5/install/include:$CPLUS_INCLUDE_PATH
 
-# protobuf
-export CMAKE_PREFIX_PATH=/home/rgirdhar/Software/utils/google-protobuf/install/:$CMAKE_PREFIX_PATH
-export PATH=/home/rgirdhar/Software/utils/google-protobuf/install/bin/:$PATH
-export LD_LIBRARY_PATH=/home/rgirdhar/Software/utils/google-protobuf/install/lib:$LD_LIBRARY_PATH
-export LIBRARY_PATH=/home/rgirdhar/Software/utils/google-protobuf/install/lib:$LIBRARY_PATH
-export C_INCLUDE_PATH=/home/rgirdhar/Software/utils/google-protobuf/install/include:$C_INCLUDE_PATH
-export CPLUS_INCLUDE_PATH=/home/rgirdhar/Software/utils/google-protobuf/install/include:$CPLUS_INCLUDE_PATH
-
 # autoconf/autoreconf
 export PATH=/home/rgirdhar/Software/utils/autoreconf/bin:$PATH
 
@@ -496,12 +482,6 @@ export LIBRARY_PATH=/home/rgirdhar/Software/visualization/ImageMagick/install/li
 # gnuplot
 export PATH=$PATH:/home/rgirdhar/Software/visualization/gnuplot/install/bin/
 
-
-
-# trying another torch installation
-# . /home/rgirdhar/Software/vision/torch/torch/install/bin/torch-activate
-
-
 # openSSL
 export CMAKE_PREFIX_PATH=/home/rgirdhar/Software/utils/openssl/install/:$CMAKE_PREFIX_PATH
 export PATH=$PATH:/home/rgirdhar/Software/utils/openssl/install/bin/
@@ -510,16 +490,16 @@ export CPLUS_INCLUDE_PATH=$CPLUS_INCLUDE_PATH:/home/rgirdhar/Software/utils/open
 export LIBRARY_PATH=$LIBRARY_PATH:/home/rgirdhar/Software/utils/openssl/install/lib/
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/rgirdhar/Software/utils/openssl/install/lib/
 
-# latest g++ thanks to Xinlei
-export CMAKE_PREFIX_PATH=/home/xinleic/tools/gcc/:$CMAKE_PREFIX_PATH
-export CC=/home/xinleic/tools/gcc/bin/gcc
-export CXX=/home/xinleic/tools/gcc/bin/g++
-export PATH=/home/xinleic/tools/gcc/bin/:$PATH
-export LIBRARY_PATH=/home/xinleic/tools/gcc/lib/:$LIBRARY_PATH
-export LD_LIBRARY_PATH=/home/xinleic/tools/gcc/lib/:$LD_LIBRARY_PATH
-export C_INCLUDE_PATH=/home/xinleic/tools/gcc/include/:$C_INCLUDE_PATH
-export CPLUS_INCLUDE_PATH=/home/xinleic/tools/gcc/include/:$CPLUS_INCLUDE_PATH
-export LD_PRELOAD=/home/xinleic/tools/gcc/lib64/libstdc++.so.6
+## latest g++ thanks to Xinlei
+#export CMAKE_PREFIX_PATH=/home/xinleic/tools/gcc/:$CMAKE_PREFIX_PATH
+#export CC=/home/xinleic/tools/gcc/bin/gcc
+#export CXX=/home/xinleic/tools/gcc/bin/g++
+#export PATH=/home/xinleic/tools/gcc/bin/:$PATH
+#export LIBRARY_PATH=/home/xinleic/tools/gcc/lib/:$LIBRARY_PATH
+#export LD_LIBRARY_PATH=/home/xinleic/tools/gcc/lib/:$LD_LIBRARY_PATH
+#export C_INCLUDE_PATH=/home/xinleic/tools/gcc/include/:$C_INCLUDE_PATH
+#export CPLUS_INCLUDE_PATH=/home/xinleic/tools/gcc/include/:$CPLUS_INCLUDE_PATH
+#export LD_PRELOAD=/home/xinleic/tools/gcc/lib64/libstdc++.so.6
 
 # use cuda7
 export CMAKE_PREFIX_PATH=/usr/local/cuda-7.0/:$CMAKE_PREFIX_PATH
@@ -528,6 +508,73 @@ export LIBRARY_PATH=/usr/local/cuda-7.0/lib64:$LIBRARY_PATH
 export LD_LIBRARY_PATH=/usr/local/cuda-7.0/lib64:$LD_LIBRARY_PATH
 export C_INCLUDE_PATH=/usr/local/cuda-7.0/include/:$C_INCLUDE_PATH
 export CPLUS_INCLUDE_PATH=/usr/local/cuda-7.0/include/:$CPLUS_INCLUDE_PATH
+
+#### Torch installation libs from Xinlei
+#if [ "$TORCH" == 1 ]; then
+#  export XHOME=/home/xinleic
+#  export SCALA_HOME=$XHOME/Tools/scala
+#  export SBT_HOME=$XHOME/Tools/sbt
+#
+#  export JAVA_HOME=$XHOME/jdk1.8.0_31
+#  export PERL5LIB=$XHOME/Tools/lib/perl5/site_perl/5.8.8/
+#  COOL_HOME=$XHOME/cools
+#  TOOL_HOME=$XHOME/tools
+#  CONDA_HOME=$XHOME/anaconda
+#  export CC=$TOOL_HOME/gcc/bin/gcc
+#  export CXX=$TOOL_HOME/gcc/bin/g++
+#  export LD_PRELOAD=$TOOL_HOME/gcc/lib64/libstdc++.so.6
+#  export MATLAB_ROOT=/opt/matlab/8.1
+#
+## export PYTHONPATH=$XHOME/caffe/python:$PYTHONPATH
+#
+#  if [ `uname -n` = "compute-1-19.local" ] || [ `uname -n` = "compute-1-23.local" ] || [ `uname -n` = "compute-1-24.local" ] || [ `uname -n` = "compute-1-25.local" ] || [ `uname -n` = "compute-1-26.local" ] || [ `uname -n` = "compute-1-28.local" ]; then
+#      export PATH=$JAVA_HOME/bin:$SCALA_HOME/bin:$SBT_HOME:$COOL_HOME/protobuf/bin:/usr/local/cuda-7.0/bin:$XHOME/Tools/bin:$TOOL_HOME/cmake/bin:$MATLAB_ROOT/bin:$PATH
+#      export PATH=$TOOL_HOME/gnuplot/bin:$TOOL_HOME/lz4/bin:$TOOL_HOME/zstd/bin:$TOOL_HOME/jemalloc/bin:$TOOL_HOME/flex/bin:$TOOL_HOME/bison/bin:$TOOL_HOME/numactl/bin:$PATH
+#      export PATH=$XHOME/intel/mkl/bin:$TOOL_HOME/gcc/bin:$TOOL_HOME/autoconf/bin:$TOOL_HOME/automake/bin:$TOOL_HOME/libtool/bin:$TOOL_HOME/libjpeg/bin:$TOOL_HOME/ImageMagick/bin:$TOOL_HOME/readline/bin:$TOOL_HOME/ncurses/bin:$TOOL_HOME/fftw/bin:$TOOL_HOME/sox/bin:$CONDA_HOME/bin:$PATH
+#
+#      export LD_LIBRARY_PATH=$XHOME/opencvn/lib:/usr/local/cuda-7.0/lib64:$COOL_HOME/gflags/lib:$COOL_HOME/glog/lib:$COOL_HOME/protobuf/lib:$COOL_HOME/leveldb:$COOL_HOME/liblmdb:$COOL_HOME/snappy/lib:$TOOL_HOME/cudnn-v3/lib64:$XHOME/Tools/lib:$TOOL_HOME/cmake/lib:$LD_LIBRARY_PATH
+#      export LIBRARY_PATH=$XHOME/opencvn/lib:/usr/local/cuda-7.0/lib64:$COOL_HOME/gflags/lib:$COOL_HOME/glog/lib:$COOL_HOME/protobuf/lib:$COOL_HOME/leveldb:$COOL_HOME/liblmdb:$COOL_HOME/snappy/lib:$TOOL_HOME/cudnn-v3/lib64:$XHOME/Tools/lib:$TOOL_HOME/cmake/lib:$LIBRARY_PATH
+#      export C_INCLUDE_PATH=$XHOME/opencvn/include:/usr/local/cuda-7.0/include:$COOL_HOME/gflags/include:$COOL_HOME/glog/include:$COOL_HOME/protobuf/include:$COOL_HOME/leveldb:$COOL_HOME/liblmdb:$COOL_HOME/snappy/include:$TOOL_HOME/cudnn-v3/include:$XHOME/Tools/include:$TOOL_HOME/cmake/include:$C_INCLUDE_PATH
+#      export CPLUS_INCLUDE_PATH=$XHOME/opencvn/include:/usr/local/cuda-7.0/include:$COOL_HOME/gflags/include:$COOL_HOME/glog/include:$COOL_HOME/protobuf/include:$COOL_HOME/leveldb:$COOL_HOME/liblmdb:$COOL_HOME/snappy/include:$TOOL_HOME/cudnn-v3/include:$XHOME/Tools/include:$TOOL_HOME/cmake/include:$CPLUS_INCLUDE_PATH
+#      export LD_LIBRARY_PATH=$TOOL_HOME/folly/lib:$TOOL_HOME/wangle/lib:$TOOL_HOME/thrift/lib:$TOOL_HOME/thpp/lib:$TOOL_HOME/fblualib/lib:$TOOL_HOME/gtest/lib:$TOOL_HOME/gmock/lib:$LD_LIBRARY_PATH
+#      export LIBRARY_PATH=$TOOL_HOME/folly/lib:$TOOL_HOME/wangle/lib:$TOOL_HOME/thrift/lib:$TOOL_HOME/thpp/lib:$TOOL_HOME/fblualib/lib:$TOOL_HOME/gtest/lib:$TOOL_HOME/gmock/lib:$LIBRARY_PATH
+#      export LD_LIBRARY_PATH=$TOOL_HOME/matio/lib:$TOOL_HOME/lz4/lib:$TOOL_HOME/zstd/lib:$TOOL_HOME/double/lib:$TOOL_HOME/jemalloc/lib:$TOOL_HOME/flex/lib:$TOOL_HOME/bison/lib:$TOOL_HOME/numactl/lib:$TOOL_HOME/libedit/lib:$TOOL_HOME/sasl/lib:$LD_LIBRARY_PATH
+#      export LIBRARY_PATH=$TOOL_HOME/matio/lib:$TOOL_HOME/lz4/lib:$TOOL_HOME/zstd/lib:$TOOL_HOME/double/lib:$TOOL_HOME/jemalloc/lib:$TOOL_HOME/flex/lib:$TOOL_HOME/bison/lib:$TOOL_HOME/numactl/lib:$TOOL_HOME/libedit/lib:$TOOL_HOME/sasl/lib:$LIBRARY_PATH
+#      export LD_LIBRARY_PATH=$XHOME/intel/mkl/lib/intel64:$TOOL_HOME/gcc/lib64:$TOOL_HOME/libtool/lib:$TOOL_HOME/libjpeg/lib:$TOOL_HOME/ImageMagick/lib:$TOOL_HOME/readline/lib:$TOOL_HOME/ncurses/lib:$TOOL_HOME/fftw/lib:$TOOL_HOME/sox/lib:$CONDA_HOME/lib:$LD_LIBRARY_PATH
+#      export LIBRARY_PATH=$XHOME/intel/mkl/lib/intel64:$TOOL_HOME/gcc/lib64:$TOOL_HOME/libtool/lib:$TOOL_HOME/libjpeg/lib:$TOOL_HOME/ImageMagick/lib:$TOOL_HOME/readline/lib:$TOOL_HOME/ncurses/lib:$TOOL_HOME/fftw/lib:$TOOL_HOME/sox/lib:$CONDA_HOME/lib:$LIBRARY_PATH
+#      
+#      #if [ -d $XHOME/ktorch/install/bin ]; then
+#      #    . $XHOME/ktorch/install/bin/torch-activate
+#      #fi
+#  else
+#      export PATH=$JAVA_HOME/bin:$SCALA_HOME/bin:$SBT_HOME:$XHOME/intel/mkl/bin:$COOL_HOME/protobuf/bin:$XHOME/cuda/bin:$XHOME/Tools/bin:$TOOL_HOME/cmake/bin:/opt/matlab/8.1/bin:$CONDA_HOME/bin:$PATH
+#      export LD_LIBRARY_PATH=$XHOME/intel/mkl/lib/intel64:$XHOME/opencvc/lib:$XHOME/cuda/lib64:$COOL_HOME/gflags/lib:$COOL_HOME/glog/lib:$COOL_HOME/protobuf/lib:$COOL_HOME/leveldb:$COOL_HOME/liblmdb:$COOL_HOME/snappy/lib:$XHOME/Tools/lib:$TOOL_HOME/cmake/lib:$CONDA_HOME/lib:$LD_LIBRARY_PATH
+#      export LIBRARY_PATH=$XHOME/intel/mkl/lib/intel64:$XHOME/opencvc/lib:$XHOME/cuda/lib64:$COOL_HOME/gflags/lib:$COOL_HOME/glog/lib:$COOL_HOME/protobuf/lib:$COOL_HOME/leveldb:$COOL_HOME/liblmdb:$COOL_HOME/snappy/lib:$XHOME/Tools/lib:$TOOL_HOME/cmake/lib:$CONDA_HOME/lib:$LIBRARY_PATH
+#      export C_INCLUDE_PATH=$XHOME/intel/mkl/include:$XHOME/opencvc/include:$XHOME/cuda/include:$COOL_HOME/gflags/include:$COOL_HOME/glog/include:$COOL_HOME/protobuf/include:$COOL_HOME/leveldb:$COOL_HOME/liblmdb:$COOL_HOME/snappy/include:$XHOME/Tools/include:$TOOL_HOME/cmake/include:$CONDA_HOME/include:$C_INCLUDE_PATH
+#      export CPLUS_INCLUDE_PATH=$XHOME/intel/mkl/include:$XHOME/opencvc/include:$XHOME/cuda/include:$COOL_HOME/gflags/include:$COOL_HOME/glog/include:$COOL_HOME/protobuf/include:$COOL_HOME/leveldb:$COOL_HOME/liblmdb:$COOL_HOME/snappy/include:$XHOME/Tools/include:$TOOL_HOME/cmake/include:$CONDA_HOME/include:$CPLUS_INCLUDE_PATH
+#  fi
+#fi
+
+# for tmux
+export PATH=~/Software/utils/tmux/install/bin:$PATH
+export LD_LIBRARY_PATH=~/Software/utils/libevent/install/lib:$LD_LIBRARY_PATH
+export LIBRARY_PATH=~/Software/utils/libevent/install/lib:$LIBRARY_PATH
+export C_INCLUDE_PATH=~/Software/utils/libevent/install/include:$C_INCLUDE_PATH
+export CPLUS_INCLUDE_PATH=~/Software/utils/libevent/install/include:$CPLUS_INCLUDE_PATH
+
+# protobuf
+export CMAKE_PREFIX_PATH=/home/rgirdhar/Software/utils/google-protobuf/install/:$CMAKE_PREFIX_PATH
+export PATH=/home/rgirdhar/Software/utils/google-protobuf/install/bin/:$PATH
+export LD_LIBRARY_PATH=/home/rgirdhar/Software/utils/google-protobuf/install/lib:$LD_LIBRARY_PATH
+export LIBRARY_PATH=/home/rgirdhar/Software/utils/google-protobuf/install/lib:$LIBRARY_PATH
+export C_INCLUDE_PATH=/home/rgirdhar/Software/utils/google-protobuf/install/include:$C_INCLUDE_PATH
+export CPLUS_INCLUDE_PATH=/home/rgirdhar/Software/utils/google-protobuf/install/include:$CPLUS_INCLUDE_PATH
+
+. /home/rgirdhar/Software/vision/torch/torch/install/bin/torch-activate
+
+
+
+. /home/rgirdhar/Software/vision/torch/torch/install/bin/torch-activate
 
 
 . /home/rgirdhar/Software/vision/torch/torch/install/bin/torch-activate
