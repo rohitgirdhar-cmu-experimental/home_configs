@@ -227,10 +227,10 @@ export CPLUS_INCLUDE_PATH=/home/rgirdhar/Software/utils/boost/include/:$CPLUS_IN
 
 # added by Anaconda 2.1.0 installer
 export PATH="/home/rgirdhar/Software/pl/python/anaconda/bin:$PATH"
-#export LD_LIBRARY_PATH="/home/rgirdhar/Software/pl/python/anaconda/lib:${LD_LIBRARY_PATH}"
-export LIBRARY_PATH="/home/rgirdhar/Software/pl/python/anaconda/lib:${LIBRARY_PATH}"
-export C_INCLUDE_PATH="/home/rgirdhar/Software/pl/python/anaconda/include:${C_INCLUDE_PATH}"
-export CPLUS_INCLUDE_PATH="/home/rgirdhar/Software/pl/python/anaconda/include:${CPLUS_INCLUDE_PATH}"
+# export LD_LIBRARY_PATH="/home/rgirdhar/Software/pl/python/anaconda/lib:${LD_LIBRARY_PATH}"
+# export LIBRARY_PATH="/home/rgirdhar/Software/pl/python/anaconda/lib:${LIBRARY_PATH}"
+# export C_INCLUDE_PATH="/home/rgirdhar/Software/pl/python/anaconda/include:${C_INCLUDE_PATH}"
+# export CPLUS_INCLUDE_PATH="/home/rgirdhar/Software/pl/python/anaconda/include:${CPLUS_INCLUDE_PATH}"
 
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/ashrivas/cv-libs/lib/
 
@@ -266,16 +266,20 @@ export C_INCLUDE_PATH=/home/rgirdhar/Software/utils/libpng/install/include/:$C_I
 export PKG_CONFIG_PATH=/home/rgirdhar/Software/utils/libpng/install/lib/pkgconfig/:$PKG_CONFIG_PATH
 
 # for libjpeg
+export CMAKE_PREFIX_PATH=/home/rgirdhar/Software/utils/libjpeg/install/:$CMAKE_PREFIX_PATH
 export LD_LIBRARY_PATH=/home/rgirdhar/Software/utils/libjpeg/install/lib/:$LD_LIBRARY_PATH
 export LIBRARY_PATH=/home/rgirdhar/Software/utils/libjpeg/install/lib/:$LIBRARY_PATH
 export CPLUS_INCLUDE_PATH=/home/rgirdhar/Software/utils/libjpeg/install/include:$CPLUS_INCLUDE_PATH
 export C_INCLUDE_PATH=/home/rgirdhar/Software/utils/libjpeg/install/include:$C_INCLUDE_PATH
+# anaconda opencv needs jpeg8, so here it goes
+export LD_LIBRARY_PATH=/home/rgirdhar/Software/utils/libjpeg/install-8d/lib/:$LD_LIBRARY_PATH
+export LIBRARY_PATH=/home/rgirdhar/Software/utils/libjpeg/install-8d/lib/:$LIBRARY_PATH
 
 # for cudnn
-export LD_LIBRARY_PATH=/home/rgirdhar/Software/gpu/cudnn/:$LD_LIBRARY_PATH
-export LIBRARY_PATH=/home/rgirdhar/Software/gpu/cudnn/:$LIBRARY_PATH
-export CPLUS_INCLUDE_PATH=/home/rgirdhar/Software/gpu/cudnn/:$CPLUS_INCLUDE_PATH
-export C_INCLUDE_PATH=/home/rgirdhar/Software/gpu/cudnn/:$C_INCLUDE_PATH
+export LD_LIBRARY_PATH=/home/rgirdhar/Software/gpu/cudnn/lib64/:$LD_LIBRARY_PATH
+export LIBRARY_PATH=/home/rgirdhar/Software/gpu/cudnn/lib64/:$LIBRARY_PATH
+export CPLUS_INCLUDE_PATH=/home/rgirdhar/Software/gpu/cudnn/include:$CPLUS_INCLUDE_PATH
+export C_INCLUDE_PATH=/home/rgirdhar/Software/gpu/cudnn/include:$C_INCLUDE_PATH
 
 # for other caffe libs
 export C_INCLUDE_PATH=$C_INCLUDE_PATH:/opt/glog/include/:/home/rgirdhar/Software/utils/gflags/install/include/
@@ -572,9 +576,5 @@ export CPLUS_INCLUDE_PATH=/home/rgirdhar/Software/utils/google-protobuf/install/
 
 . /home/rgirdhar/Software/vision/torch/torch/install/bin/torch-activate
 
+alias thinit="source ~/.bashrc_torch"
 
-
-. /home/rgirdhar/Software/vision/torch/torch/install/bin/torch-activate
-
-
-. /home/rgirdhar/Software/vision/torch/torch/install/bin/torch-activate
