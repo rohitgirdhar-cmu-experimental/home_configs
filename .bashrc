@@ -237,7 +237,8 @@ export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/ashrivas/cv-libs/lib/
 # yoda scripts
 export PATH=$PATH:/home/rgirdhar/Software/yoda-scripts/
 alias get_node="qsub -X -I -l nodes=1:ppn=8,walltime=99:99:99"
-alias get_node_big="qsub -X -I -l nodes=1:ppn=8,walltime=99:99:99 -q big-mem"
+alias get_node_big="qsub -X -I -l nodes=1:ppn=12,walltime=99:99:99 -q big-mem"
+alias get_node_big8="qsub -X -I -l nodes=1:ppn=8,walltime=99:99:99 -q big-mem"
 
 # for cmake
 export PATH=$PATH:/home/rgirdhar/Software/utils/cmake/bin/
@@ -257,13 +258,6 @@ export LIBRARY_PATH=$LIBRARY_PATH:/home/rgirdhar/Software/math/lapack/lapack-3.5
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/rgirdhar/Software/utils/libevent/install/lib/
 export LIBRARY_PATH=$LIBRARY_PATH:/home/rgirdhar/Software/utils/libevent/install/lib/
 export INCLUDE_PATH=$INCLUDE_PATH:/home/rgirdhar/Software/utils/libevent/install/include/
-
-# for libpng/png++
-export LD_LIBRARY_PATH=/home/rgirdhar/Software/utils/libpng/install/lib/:$LD_LIBRARY_PATH
-export LIBRARY_PATH=/home/rgirdhar/Software/utils/libpng/install/lib/:$LIBRARY_PATH
-export CPLUS_INCLUDE_PATH=/home/rgirdhar/Software/utils/libpng/install/include/:$CPLUS_INCLUDE_PATH
-export C_INCLUDE_PATH=/home/rgirdhar/Software/utils/libpng/install/include/:$C_INCLUDE_PATH
-export PKG_CONFIG_PATH=/home/rgirdhar/Software/utils/libpng/install/lib/pkgconfig/:$PKG_CONFIG_PATH
 
 # for libjpeg
 export CMAKE_PREFIX_PATH=/home/rgirdhar/Software/utils/libjpeg/install/:$CMAKE_PREFIX_PATH
@@ -310,21 +304,23 @@ export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda-6.5/lib64/
 export LD_LIBRARY_PATH=/home/rgirdhar/Software/utils/gflags/install/lib/:$LD_LIBRARY_PATH
 
 ## opencv, using this as it includes opencv-contrib
-# export LIBRARY_PATH=/home/ashrivas/cv-libs/opencv/lib/:$LIBRARY_PATH
-# export LD_LIBRARY_PATH=/home/ashrivas/cv-libs/opencv/lib/:$LD_LIBRARY_PATH
-# export C_INCLUDE_PATH=/home/ashrivas/cv-libs/opencv/include/:$C_INCLUDE_PATH
-# export CPLUS_INCLUDE_PATH=/home/ashrivas/cv-libs/opencv/include/:$CPLUS_INCLUDE_PATH
-# export PKG_CONFIG_PATH=/home/ashrivas/cv-libs/opencv/lib/pkgconfig/:$PKG_CONFIG_PATH
+export CMAKE_PREFIX_PATH=/home/ashrivas/cv-libs/opencv/:$CMAKE_PREFIX_PATH
+export LIBRARY_PATH=/home/ashrivas/cv-libs/opencv/lib/:$LIBRARY_PATH
+export LD_LIBRARY_PATH=/home/ashrivas/cv-libs/opencv/lib/:$LD_LIBRARY_PATH
+export C_INCLUDE_PATH=/home/ashrivas/cv-libs/opencv/include/:$C_INCLUDE_PATH
+export CPLUS_INCLUDE_PATH=/home/ashrivas/cv-libs/opencv/include/:$CPLUS_INCLUDE_PATH
+export PKG_CONFIG_PATH=/home/ashrivas/cv-libs/opencv/lib/pkgconfig/:$PKG_CONFIG_PATH
 
-# stick with my own installation
-export CMAKE_PREFIX_PATH=/home/rgirdhar/Software/vision/opencv/install/:$CMAKE_PREFIX_PATH
-export LIBRARY_PATH=/home/rgirdhar/Software/vision/opencv/install/lib/:$LIBRARY_PATH
-export LD_LIBRARY_PATH=/home/rgirdhar/Software/vision/opencv/install/lib/:$LD_LIBRARY_PATH
-export C_INCLUDE_PATH=/home/rgirdhar/Software/vision/opencv/install/include/:$C_INCLUDE_PATH
-export CPLUS_INCLUDE_PATH=/home/rgirdhar/Software/vision/opencv/install/include/:$CPLUS_INCLUDE_PATH
-export PKG_CONFIG_PATH=/home/rgirdhar/Software/vision/opencv/install/pkgconfig/:$PKG_CONFIG_PATH
+## stick with my own installation
+#export CMAKE_PREFIX_PATH=/home/rgirdhar/Software/vision/opencv/install/:$CMAKE_PREFIX_PATH
+#export PATH=/home/rgirdhar/Software/vision/opencv/install/bin/:$PATH
+#export LIBRARY_PATH=/home/rgirdhar/Software/vision/opencv/install/lib/:$LIBRARY_PATH
+#export LD_LIBRARY_PATH=/home/rgirdhar/Software/vision/opencv/install/lib/:$LD_LIBRARY_PATH
+#export C_INCLUDE_PATH=/home/rgirdhar/Software/vision/opencv/install/include/:$C_INCLUDE_PATH
+#export CPLUS_INCLUDE_PATH=/home/rgirdhar/Software/vision/opencv/install/include/:$CPLUS_INCLUDE_PATH
+#export PKG_CONFIG_PATH=/home/rgirdhar/Software/vision/opencv/install/lib/pkgconfig/:$PKG_CONFIG_PATH
 
-export PATH=$PATH:/usr/local/cuda-6.5/bin/
+export PATH=$PATH:/usr/local/cuda-7.0/bin/
 
 alias python=ipython
 
@@ -574,7 +570,15 @@ export LIBRARY_PATH=/home/rgirdhar/Software/utils/google-protobuf/install/lib:$L
 export C_INCLUDE_PATH=/home/rgirdhar/Software/utils/google-protobuf/install/include:$C_INCLUDE_PATH
 export CPLUS_INCLUDE_PATH=/home/rgirdhar/Software/utils/google-protobuf/install/include:$CPLUS_INCLUDE_PATH
 
-. /home/rgirdhar/Software/vision/torch/torch/install/bin/torch-activate
+# . /home/rgirdhar/Software/vision/torch/torch/install/bin/torch-activate
 
 alias thinit="source ~/.bashrc_torch"
+
+# for libpng/png++
+export CMAKE_PREFIX_PATH=/home/rgirdhar/Software/utils/libpng/install/:$CMAKE_PREFIX_PATH
+export LD_LIBRARY_PATH=/home/rgirdhar/Software/utils/libpng/install/lib/:$LD_LIBRARY_PATH
+export LIBRARY_PATH=/home/rgirdhar/Software/utils/libpng/install/lib/:$LIBRARY_PATH
+export CPLUS_INCLUDE_PATH=/home/rgirdhar/Software/utils/libpng/install/include/:$CPLUS_INCLUDE_PATH
+export C_INCLUDE_PATH=/home/rgirdhar/Software/utils/libpng/install/include/:$C_INCLUDE_PATH
+export PKG_CONFIG_PATH=/home/rgirdhar/Software/utils/libpng/install/lib/pkgconfig/:$PKG_CONFIG_PATH
 
