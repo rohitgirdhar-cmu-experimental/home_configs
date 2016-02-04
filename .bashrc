@@ -333,8 +333,10 @@ export PATH=$PATH:/home/rgirdhar/Software/utils/hub/
 export CMAKE_PREFIX_PATH=/home/rgirdhar/Software/utils/libzmq/install/:$CMAKE_PREFIX_PATH
 export LD_LIBRARY_PATH=/home/rgirdhar/Software/utils/libzmq/install/lib/:$LD_LIBRARY_PATH
 export LIBRARY_PATH=/home/rgirdhar/Software/utils/libzmq/install/lib/:$LIBRARY_PATH
-export INCLUDE_PATH=/home/rgirdhar/Software/utils/libzmq/install/include/:$INCLUDE_PATH
-export INCLUDE_PATH=/home/rgirdhar/Software/utils/libzmq/cppzmq/:$INCLUDE_PATH
+export C_INCLUDE_PATH=/home/rgirdhar/Software/utils/libzmq/install/include/:$C_INCLUDE_PATH
+export CPLUS_INCLUDE_PATH=/home/rgirdhar/Software/utils/libzmq/install/include/:$CPLUS_INCLUDE_PATH
+export C_INCLUDE_PATH=/home/rgirdhar/Software/utils/libzmq/cppzmq/:$C_INCLUDE_PATH
+export CPLUS_INCLUDE_PATH=/home/rgirdhar/Software/utils/libzmq/cppzmq/:$CPLUS_INCLUDE_PATH
 
 # for libhdf5
 export CMAKE_PREFIX_PATH=/home/rgirdhar/Software/utils/libhdf5/install:$CMAKE_PREFIX_PATH
