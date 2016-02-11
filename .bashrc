@@ -74,3 +74,29 @@ alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 LS_COLORS=$LS_COLORS:'di=0;35:' ; export LS_COLORS
+
+alias get_node="qsub -X -I -l nodes=1:ppn=8,walltime=99:99:99"
+
+# added by Anaconda2 2.5.0 installer
+export PATH="/home/rgirdhar/Software/pl/python/anaconda2/bin:$PATH"
+
+# libevent
+export CMAKE_PREFIX_PATH=/home/rgirdhar/Software/utils/libevent/install:$CMAKE_PREFIX_PATH
+export LD_LIBRARY_PATH=/home/rgirdhar/Software/utils/libevent/install/lib/:$LD_LIBRARY_PATH
+export LIBRARY_PATH=/home/rgirdhar/Software/utils/libevent/install/lib/:$LIBRARY_PATH
+export C_INCLUDE_PATH=/home/rgirdhar/Software/utils/libevent/install/include:$C_INCLUDE_PATH
+export CPLUS_INCLUDE_PATH=/home/rgirdhar/Software/utils/libevent/install/include:$CPLUS_INCLUDE_PATH
+
+## ncurses
+#export CMAKE_PREFIX_PATH=/home/rgirdhar/Software/utils/ncurses/install/:$CMAKE_PREFIX_PATH
+#export PATH=/home/rgirdhar/Software/utils/ncurses/install/bin/:$PATH
+#export LD_LIBRARY_PATH=/home/rgirdhar/Software/utils/ncurses/install/lib/:$LD_LIBRARY_PATH
+#export LIBRARY_PATH=/home/rgirdhar/Software/utils/ncurses/install/lib/:$LIBRARY_PATH
+#export C_INCLUDE_PATH=/home/rgirdhar/Software/utils/ncurses/install/include/:$C_INCLUDE_PATH
+#export CPLUS_INCLUDE_PATH=/home/rgirdhar/Software/utils/ncurses/install/include/:$CPLUS_INCLUDE_PATH
+
+# tmux
+export PATH=/home/rgirdhar/Software/utils/tmux/install/bin/:$PATH
+
+# htop
+export PATH=/home/rgirdhar/Software/utils/htop/install/bin/:$PATH
