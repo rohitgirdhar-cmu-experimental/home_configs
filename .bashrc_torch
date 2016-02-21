@@ -214,8 +214,8 @@ export CMAKE_PREFIX_PATH=/home/xinleic/tools/gcc/:$CMAKE_PREFIX_PATH
 export CC=/home/xinleic/tools/gcc/bin/gcc
 export CXX=/home/xinleic/tools/gcc/bin/g++
 export PATH=/home/xinleic/tools/gcc/bin/:$PATH
-export LIBRARY_PATH=/home/xinleic/tools/gcc/lib/:$LIBRARY_PATH
-export LD_LIBRARY_PATH=/home/xinleic/tools/gcc/lib/:$LD_LIBRARY_PATH
+export LIBRARY_PATH=/home/xinleic/tools/gcc/lib64/:$LIBRARY_PATH
+export LD_LIBRARY_PATH=/home/xinleic/tools/gcc/lib64/:$LD_LIBRARY_PATH
 export C_INCLUDE_PATH=/home/xinleic/tools/gcc/include/:$C_INCLUDE_PATH
 export CPLUS_INCLUDE_PATH=/home/xinleic/tools/gcc/include/:$CPLUS_INCLUDE_PATH
 export LD_PRELOAD=/home/xinleic/tools/gcc/lib64/libstdc++.so.6
@@ -282,13 +282,21 @@ export LIBRARY_PATH=~/Software/utils/libevent/install/lib:$LIBRARY_PATH
 export C_INCLUDE_PATH=~/Software/utils/libevent/install/include:$C_INCLUDE_PATH
 export CPLUS_INCLUDE_PATH=~/Software/utils/libevent/install/include:$CPLUS_INCLUDE_PATH
 
-## protobuf
-#export CMAKE_PREFIX_PATH=/home/rgirdhar/Software/utils/google-protobuf/install/:$CMAKE_PREFIX_PATH
-#export PATH=/home/rgirdhar/Software/utils/google-protobuf/install/bin/:$PATH
-#export LD_LIBRARY_PATH=/home/rgirdhar/Software/utils/google-protobuf/install/lib:$LD_LIBRARY_PATH
-#export LIBRARY_PATH=/home/rgirdhar/Software/utils/google-protobuf/install/lib:$LIBRARY_PATH
-#export C_INCLUDE_PATH=/home/rgirdhar/Software/utils/google-protobuf/install/include:$C_INCLUDE_PATH
-#export CPLUS_INCLUDE_PATH=/home/rgirdhar/Software/utils/google-protobuf/install/include:$CPLUS_INCLUDE_PATH
+# protobuf
+export CMAKE_PREFIX_PATH=/home/xinleic/cools/protobuf:$CMAKE_PREFIX_PATH
+export PATH=/home/xinleic/cools/protobuf/bin:$PATH
+export LD_LIBRARY_PATH=/home/xinleic/cools/protobuf/lib:$LD_LIBRARY_PATH
+export LIBRARY_PATH=/home/xinleic/cools/protobuf/lib:$LIBRARY_PATH
+export C_INCLUDE_PATH=/home/xinleic/cools/protobuf/include:$C_INCLUDE_PATH
+export CPLUS_INCLUDE_PATH=/home/xinleic/cools/protobuf/include:$CPLUS_INCLUDE_PATH
+export PKG_CONFIG_PATH=/home/xinleic/cools/protobuf/pkgconfig/:$PKG_CONFIG_PATH
 
 . /home/rgirdhar/Software/vision/torch/torch/install/bin/torch-activate
+
+# png
+export CMAKE_PREFIX_PATH=/home/rgirdhar/Software/utils/libpng/install/:$CMAKE_PREFIX_PATH
+export LD_LIBRARY_PATH=/home/rgirdhar/Software/utils/libpng/install/lib/:$LD_LIBRARY_PATH
+export LIBRARY_PATH=/home/rgirdhar/Software/utils/libpng/install/lib/:$LIBRARY_PATH
+export C_INCLUDE_PATH=/home/rgirdhar/Software/utils/libpng/install/include/:$C_INCLUDE_PATH
+export CPLUS_INCLUDE_PATH=/home/rgirdhar/Software/utils/libpng/install/include/:$CPLUS_INCLUDE_PATH
 

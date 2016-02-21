@@ -321,6 +321,7 @@ export PKG_CONFIG_PATH=/home/ashrivas/cv-libs/opencv/lib/pkgconfig/:$PKG_CONFIG_
 #export PKG_CONFIG_PATH=/home/rgirdhar/Software/vision/opencv/install/lib/pkgconfig/:$PKG_CONFIG_PATH
 
 export PATH=$PATH:/usr/local/cuda-7.0/bin/
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/ashrivas/cv-libs/cuda-5.5/lib64/
 
 alias python=ipython
 
@@ -584,3 +585,6 @@ export CPLUS_INCLUDE_PATH=/home/rgirdhar/Software/utils/libpng/install/include/:
 export C_INCLUDE_PATH=/home/rgirdhar/Software/utils/libpng/install/include/:$C_INCLUDE_PATH
 export PKG_CONFIG_PATH=/home/rgirdhar/Software/utils/libpng/install/lib/pkgconfig/:$PKG_CONFIG_PATH
 
+
+
+. /home/rgirdhar/Software/vision/torch/torch/install/bin/torch-activate
