@@ -76,6 +76,7 @@ alias egrep='egrep --color=auto'
 LS_COLORS=$LS_COLORS:'di=0;35:' ; export LS_COLORS
 
 alias get_node="qsub -X -I -l nodes=1:ppn=8,walltime=99:99:99"
+alias dc="echo Use cd"
 
 # added by Anaconda2 2.5.0 installer
 export PATH="/home/rgirdhar/Software/pl/python/anaconda2/bin:$PATH"
@@ -110,11 +111,11 @@ export PATH=/home/rgirdhar/Software/utils/htop/install/bin/:$PATH
 export PATH=/home/rgirdhar/Software/utils/cmake/cmake-3.5.0-rc2-Linux-x86_64/bin/:$PATH
 
 # boost
-export CMAKE_PREFIX_PATH=/home/rgirdhar/Software/pl/cpp/boost/boost_1_60_0/:$CMAKE_PREFIX_PATH
-export C_INCLUDE_PATH=/home/rgirdhar/Software/pl/cpp/boost/boost_1_60_0/:$C_INCLUDE_PATH
-export CPLUS_INCLUDE_PATH=/home/rgirdhar/Software/pl/cpp/boost/boost_1_60_0/:$CPLUS_INCLUDE_PATH
-export LIBRARY_PATH=/home/rgirdhar/Software/pl/cpp/boost/boost_1_60_0/stage/lib:$LIBRARY_PATH
-export LD_LIBRARY_PATH=/home/rgirdhar/Software/pl/cpp/boost/boost_1_60_0/stage/lib:$LD_LIBRARY_PATH
+export CMAKE_PREFIX_PATH=/home/rgirdhar/Software/pl/cpp/boost/boost_1_57_0/:$CMAKE_PREFIX_PATH
+export C_INCLUDE_PATH=/home/rgirdhar/Software/pl/cpp/boost/boost_1_57_0/:$C_INCLUDE_PATH
+export CPLUS_INCLUDE_PATH=/home/rgirdhar/Software/pl/cpp/boost/boost_1_57_0/:$CPLUS_INCLUDE_PATH
+export LIBRARY_PATH=/home/rgirdhar/Software/pl/cpp/boost/boost_1_57_0/stage/lib:$LIBRARY_PATH
+export LD_LIBRARY_PATH=/home/rgirdhar/Software/pl/cpp/boost/boost_1_57_0/stage/lib:$LD_LIBRARY_PATH
 
 # protobuf
 BASE_PATH=/home/rgirdhar/Software/utils/protobuf/install
@@ -225,3 +226,18 @@ export LD_LIBRARY_PATH=$BASE_PATH/lib/:$LD_LIBRARY_PATH
 export C_INCLUDE_PATH=$BASE_PATH/include/:$C_INCLUDE_PATH
 export CPLUS_INCLUDE_PATH=$BASE_PATH/include/:$CPLUS_INCLUDE_PATH
 
+# run scripts
+export PATH=/home/rgirdhar/Software/yoda-scripts/:$PATH
+
+# new bintools
+export CMAKE_PREFIX_PATH=/home/rgirdhar/Software/utils/binutils/install/x86_64-pc-linux-gnu:$CMAKE_PREFIX_PATH
+export PATH=/home/rgirdhar/Software/utils/binutils/install/x86_64-pc-linux-gnu/bin/:$PATH
+export LIBRARY_PATH=/home/rgirdhar/Software/utils/binutils/install/x86_64-pc-linux-gnu/lib/:$LIBRARY_PATH
+export LD_LIBRARY_PATH=/home/rgirdhar/Software/utils/binutils/install/x86_64-pc-linux-gnu/lib/:$LD_LIBRARY_PATH
+export C_INCLUDE_PATH=/home/rgirdhar/Software/utils/binutils/install/include:$C_INCLUDE_PATH
+export CPLUS_INCLUDE_PATH=/home/rgirdhar/Software/utils/binutils/install/include:$CPLUS_INCLUDE_PATH
+
+export C_INCLUDE_PATH=/home/rgirdhar/Software/utils/glibc/linux-headers/linux-libc-headers-2.6.12.0/include/:$C_INCLUDE_PATH
+export CPLUS_INCLUDE_PATH=/home/rgirdhar/Software/utils/glibc/linux-headers/linux-libc-headers-2.6.12.0/include/:$CPLUS_INCLUDE_PATH
+
+export LD_LIBRARY_PATH=/home/rgirdhar/Software/utils/libsdl/install/lib/:$LD_LIBRARY_PATH
