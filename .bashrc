@@ -269,11 +269,17 @@ export C_INCLUDE_PATH=/home/rgirdhar/Software/utils/libjpeg/install/include:$C_I
 export LD_LIBRARY_PATH=/home/rgirdhar/Software/utils/libjpeg/install-8d/lib/:$LD_LIBRARY_PATH
 export LIBRARY_PATH=/home/rgirdhar/Software/utils/libjpeg/install-8d/lib/:$LIBRARY_PATH
 
-# for cudnn
-export LD_LIBRARY_PATH=/home/rgirdhar/Software/gpu/cudnn/lib64/:$LD_LIBRARY_PATH
-export LIBRARY_PATH=/home/rgirdhar/Software/gpu/cudnn/lib64/:$LIBRARY_PATH
-export CPLUS_INCLUDE_PATH=/home/rgirdhar/Software/gpu/cudnn/include:$CPLUS_INCLUDE_PATH
-export C_INCLUDE_PATH=/home/rgirdhar/Software/gpu/cudnn/include:$C_INCLUDE_PATH
+## for cudnn
+#export LD_LIBRARY_PATH=/home/rgirdhar/Software/gpu/cudnn/lib64/:$LD_LIBRARY_PATH
+#export LIBRARY_PATH=/home/rgirdhar/Software/gpu/cudnn/lib64/:$LIBRARY_PATH
+#export CPLUS_INCLUDE_PATH=/home/rgirdhar/Software/gpu/cudnn/include:$CPLUS_INCLUDE_PATH
+#export C_INCLUDE_PATH=/home/rgirdhar/Software/gpu/cudnn/include:$C_INCLUDE_PATH
+
+# cudnn v4
+export LD_LIBRARY_PATH=/home/xinleic/tools/cudnn-v4/lib64:$LD_LIBRARY_PATH
+export LIBRARY_PATH=/home/xinleic/tools/cudnn-v4/lib64:$LIBRARY_PATH
+export CPLUS_INCLUDE_PATH=/home/xinleic/tools/cudnn-v4/include:$CPLUS_INCLUDE_PATH
+export C_INCLUDE_PATH=/home/xinleic/tools/cudnn-v4/include:$C_INCLUDE_PATH
 
 # for other caffe libs
 export C_INCLUDE_PATH=$C_INCLUDE_PATH:/opt/glog/include/:/home/rgirdhar/Software/utils/gflags/install/include/
