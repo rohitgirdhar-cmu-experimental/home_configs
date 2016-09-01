@@ -601,4 +601,4 @@ export PKG_CONFIG_PATH=/home/rgirdhar/Software/utils/libpng/install/lib/pkgconfi
 export PATH=/home/rgirdhar/Software/utils/bazel/output:$PATH
 
 export LIBC17="/home/rgirdhar/Software/vision/tensorflow/other_libs/libc6_2.17"
-alias tfpython="LD_LIBRARY_PATH=$LD_LIBRARY_PATH:\"$LIBC17/lib/x86_64-linux-gnu/:$LIBC17/usr/lib/x86_64-linux-gnu/\" $LIBC17/lib/x86_64-linux-gnu/ld-2.17.so /home/rgirdhar/Software/pl/python/anaconda2/bin/python"
+alias tfpython="LD_LIBRARY_PATH=$LD_LIBRARY_PATH:\"$LIBC17/lib/x86_64-linux-gnu/:$LIBC17/usr/lib/x86_64-linux-gnu/\" /home/rgirdhar/Libs/ld-2.17.so /home/rgirdhar/Software/pl/python/anaconda2/bin/python"
