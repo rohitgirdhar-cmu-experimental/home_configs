@@ -226,11 +226,11 @@ export C_INCLUDE_PATH=/home/rgirdhar/Software/utils/boost/include/:$C_INCLUDE_PA
 export CPLUS_INCLUDE_PATH=/home/rgirdhar/Software/utils/boost/include/:$CPLUS_INCLUDE_PATH
 
 # added by Anaconda 2.1.0 installer
-export PATH="/home/rgirdhar/Software/pl/python/anaconda/bin:$PATH"
-# export LD_LIBRARY_PATH="/home/rgirdhar/Software/pl/python/anaconda/lib:${LD_LIBRARY_PATH}"
-# export LIBRARY_PATH="/home/rgirdhar/Software/pl/python/anaconda/lib:${LIBRARY_PATH}"
-# export C_INCLUDE_PATH="/home/rgirdhar/Software/pl/python/anaconda/include:${C_INCLUDE_PATH}"
-# export CPLUS_INCLUDE_PATH="/home/rgirdhar/Software/pl/python/anaconda/include:${CPLUS_INCLUDE_PATH}"
+export PATH="/home/rgirdhar/Software/pl/python/anaconda2/bin:$PATH"
+export LD_LIBRARY_PATH="/home/rgirdhar/Software/pl/python/anaconda2/lib:${LD_LIBRARY_PATH}"
+export LIBRARY_PATH="/home/rgirdhar/Software/pl/python/anaconda2/lib:${LIBRARY_PATH}"
+export C_INCLUDE_PATH="/home/rgirdhar/Software/pl/python/anaconda2/include:${C_INCLUDE_PATH}"
+export CPLUS_INCLUDE_PATH="/home/rgirdhar/Software/pl/python/anaconda2/include:${CPLUS_INCLUDE_PATH}"
 
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/ashrivas/cv-libs/lib/
 
@@ -269,17 +269,17 @@ export C_INCLUDE_PATH=/home/rgirdhar/Software/utils/libjpeg/install/include:$C_I
 export LD_LIBRARY_PATH=/home/rgirdhar/Software/utils/libjpeg/install-8d/lib/:$LD_LIBRARY_PATH
 export LIBRARY_PATH=/home/rgirdhar/Software/utils/libjpeg/install-8d/lib/:$LIBRARY_PATH
 
-## for cudnn
-#export LD_LIBRARY_PATH=/home/rgirdhar/Software/gpu/cudnn/lib64/:$LD_LIBRARY_PATH
-#export LIBRARY_PATH=/home/rgirdhar/Software/gpu/cudnn/lib64/:$LIBRARY_PATH
-#export CPLUS_INCLUDE_PATH=/home/rgirdhar/Software/gpu/cudnn/include:$CPLUS_INCLUDE_PATH
-#export C_INCLUDE_PATH=/home/rgirdhar/Software/gpu/cudnn/include:$C_INCLUDE_PATH
+# for cudnn
+export LD_LIBRARY_PATH=/home/rgirdhar/Software/gpu/cudnn/lib64/:$LD_LIBRARY_PATH
+export LIBRARY_PATH=/home/rgirdhar/Software/gpu/cudnn/lib64/:$LIBRARY_PATH
+export CPLUS_INCLUDE_PATH=/home/rgirdhar/Software/gpu/cudnn/include:$CPLUS_INCLUDE_PATH
+export C_INCLUDE_PATH=/home/rgirdhar/Software/gpu/cudnn/include:$C_INCLUDE_PATH
 
-# cudnn v4
-export LD_LIBRARY_PATH=/home/xinleic/tools/cudnn-v4/lib64:$LD_LIBRARY_PATH
-export LIBRARY_PATH=/home/xinleic/tools/cudnn-v4/lib64:$LIBRARY_PATH
-export CPLUS_INCLUDE_PATH=/home/xinleic/tools/cudnn-v4/include:$CPLUS_INCLUDE_PATH
-export C_INCLUDE_PATH=/home/xinleic/tools/cudnn-v4/include:$C_INCLUDE_PATH
+# # cudnn v4
+# export LD_LIBRARY_PATH=/home/xinleic/tools/cudnn-v4/lib64:$LD_LIBRARY_PATH
+# export LIBRARY_PATH=/home/xinleic/tools/cudnn-v4/lib64:$LIBRARY_PATH
+# export CPLUS_INCLUDE_PATH=/home/xinleic/tools/cudnn-v4/include:$CPLUS_INCLUDE_PATH
+# export C_INCLUDE_PATH=/home/xinleic/tools/cudnn-v4/include:$C_INCLUDE_PATH
 
 # for other caffe libs
 export C_INCLUDE_PATH=$C_INCLUDE_PATH:/opt/glog/include/:/home/rgirdhar/Software/utils/gflags/install/include/
@@ -329,7 +329,7 @@ export PKG_CONFIG_PATH=/home/ashrivas/cv-libs/opencv/lib/pkgconfig/:$PKG_CONFIG_
 export PATH=$PATH:/usr/local/cuda-7.0/bin/
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/ashrivas/cv-libs/cuda-5.5/lib64/
 
-alias python=ipython
+# alias python=ipython
 
 # for go and hub
 export GOROOT=/home/rgirdhar/Software/utils/go
@@ -499,24 +499,26 @@ export CPLUS_INCLUDE_PATH=$CPLUS_INCLUDE_PATH:/home/rgirdhar/Software/utils/open
 export LIBRARY_PATH=$LIBRARY_PATH:/home/rgirdhar/Software/utils/openssl/install/lib/
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/rgirdhar/Software/utils/openssl/install/lib/
 
-## latest g++ thanks to Xinlei
-#export CMAKE_PREFIX_PATH=/home/xinleic/tools/gcc/:$CMAKE_PREFIX_PATH
-#export CC=/home/xinleic/tools/gcc/bin/gcc
-#export CXX=/home/xinleic/tools/gcc/bin/g++
-#export PATH=/home/xinleic/tools/gcc/bin/:$PATH
-#export LIBRARY_PATH=/home/xinleic/tools/gcc/lib/:$LIBRARY_PATH
-#export LD_LIBRARY_PATH=/home/xinleic/tools/gcc/lib/:$LD_LIBRARY_PATH
-#export C_INCLUDE_PATH=/home/xinleic/tools/gcc/include/:$C_INCLUDE_PATH
-#export CPLUS_INCLUDE_PATH=/home/xinleic/tools/gcc/include/:$CPLUS_INCLUDE_PATH
-#export LD_PRELOAD=/home/xinleic/tools/gcc/lib64/libstdc++.so.6
+# latest g++ thanks to Xinlei
+export CMAKE_PREFIX_PATH=/home/xinleic/tools/gcc/:$CMAKE_PREFIX_PATH
+export CC=/home/xinleic/tools/gcc/bin/gcc
+export CXX=/home/xinleic/tools/gcc/bin/g++
+export PATH=/home/xinleic/tools/gcc/bin/:$PATH
+export LIBRARY_PATH=/home/xinleic/tools/gcc/lib/:$LIBRARY_PATH
+export LD_LIBRARY_PATH=/home/xinleic/tools/gcc/lib/:$LD_LIBRARY_PATH
+export C_INCLUDE_PATH=/home/xinleic/tools/gcc/include/:$C_INCLUDE_PATH
+export CPLUS_INCLUDE_PATH=/home/xinleic/tools/gcc/include/:$CPLUS_INCLUDE_PATH
+export LD_PRELOAD=/home/xinleic/tools/gcc/lib64/libstdc++.so.6
 
-# use cuda7
-export CMAKE_PREFIX_PATH=/usr/local/cuda-7.0/:$CMAKE_PREFIX_PATH
-export PATH=/usr/local/cuda-7.0/bin/:$PATH
-export LIBRARY_PATH=/usr/local/cuda-7.0/lib64:$LIBRARY_PATH
-export LD_LIBRARY_PATH=/usr/local/cuda-7.0/lib64:$LD_LIBRARY_PATH
-export C_INCLUDE_PATH=/usr/local/cuda-7.0/include/:$C_INCLUDE_PATH
-export CPLUS_INCLUDE_PATH=/usr/local/cuda-7.0/include/:$CPLUS_INCLUDE_PATH
+# use cuda7.5
+# BASEDIR=/usr/local/cuda-7.5
+BASEDIR=/home/rgirdhar/Software/gpu/cuda-7.5
+export CMAKE_PREFIX_PATH=$BASEDIR:$CMAKE_PREFIX_PATH
+export PATH=$BASEDIR/bin/:$PATH
+export LIBRARY_PATH=$BASEDIR/lib64:$LIBRARY_PATH
+export LD_LIBRARY_PATH=$BASEDIR/lib64:$LD_LIBRARY_PATH
+export C_INCLUDE_PATH=$BASEDIR/include/:$C_INCLUDE_PATH
+export CPLUS_INCLUDE_PATH=$BASEDIR/include/:$CPLUS_INCLUDE_PATH
 
 #### Torch installation libs from Xinlei
 #if [ "$TORCH" == 1 ]; then
@@ -594,3 +596,9 @@ export PKG_CONFIG_PATH=/home/rgirdhar/Software/utils/libpng/install/lib/pkgconfi
 
 
 . /home/rgirdhar/Software/vision/torch/torch/install/bin/torch-activate
+
+
+export PATH=/home/rgirdhar/Software/utils/bazel/output:$PATH
+
+export LIBC17="/home/rgirdhar/Software/vision/tensorflow/other_libs/libc6_2.17"
+alias tfpython="LD_LIBRARY_PATH=$LD_LIBRARY_PATH:\"$LIBC17/lib/x86_64-linux-gnu/:$LIBC17/usr/lib/x86_64-linux-gnu/\" $LIBC17/lib/x86_64-linux-gnu/ld-2.17.so /home/rgirdhar/Software/pl/python/anaconda2/bin/python"
