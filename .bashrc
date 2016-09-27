@@ -232,7 +232,7 @@ export LIBRARY_PATH="/home/rgirdhar/Software/pl/python/anaconda2/lib:${LIBRARY_P
 export C_INCLUDE_PATH="/home/rgirdhar/Software/pl/python/anaconda2/include:${C_INCLUDE_PATH}"
 export CPLUS_INCLUDE_PATH="/home/rgirdhar/Software/pl/python/anaconda2/include:${CPLUS_INCLUDE_PATH}"
 
-export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/ashrivas/cv-libs/lib/
+# export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/ashrivas/cv-libs/lib/
 
 # yoda scripts
 export PATH=$PATH:/home/rgirdhar/Software/yoda-scripts/
@@ -319,17 +319,17 @@ export LD_LIBRARY_PATH=/home/rgirdhar/Software/utils/gflags/install/lib/:$LD_LIB
 # export PKG_CONFIG_PATH=/home/ashrivas/cv-libs/opencv/lib/pkgconfig/:$PKG_CONFIG_PATH
 # export PYTHONPATH=/home/ashrivas/cv-libs/opencv/lib/python2.6/site-packages/:$PYTHONPATH
 
-# stick with my own installation
-export CMAKE_PREFIX_PATH=/home/rgirdhar/Software/vision/opencv/install/:$CMAKE_PREFIX_PATH
-export PATH=/home/rgirdhar/Software/vision/opencv/install/bin/:$PATH
-export LIBRARY_PATH=/home/rgirdhar/Software/vision/opencv/install/lib/:$LIBRARY_PATH
-export LD_LIBRARY_PATH=/home/rgirdhar/Software/vision/opencv/install/lib/:$LD_LIBRARY_PATH
-export C_INCLUDE_PATH=/home/rgirdhar/Software/vision/opencv/install/include/:$C_INCLUDE_PATH
-export CPLUS_INCLUDE_PATH=/home/rgirdhar/Software/vision/opencv/install/include/:$CPLUS_INCLUDE_PATH
-export PKG_CONFIG_PATH=/home/rgirdhar/Software/vision/opencv/install/lib/pkgconfig/:$PKG_CONFIG_PATH
+# # stick with my own installation
+# export CMAKE_PREFIX_PATH=/home/rgirdhar/Software/vision/opencv/install/:$CMAKE_PREFIX_PATH
+# export PATH=/home/rgirdhar/Software/vision/opencv/install/bin/:$PATH
+# export LIBRARY_PATH=/home/rgirdhar/Software/vision/opencv/install/lib/:$LIBRARY_PATH
+# export LD_LIBRARY_PATH=/home/rgirdhar/Software/vision/opencv/install/lib/:$LD_LIBRARY_PATH
+# export C_INCLUDE_PATH=/home/rgirdhar/Software/vision/opencv/install/include/:$C_INCLUDE_PATH
+# export CPLUS_INCLUDE_PATH=/home/rgirdhar/Software/vision/opencv/install/include/:$CPLUS_INCLUDE_PATH
+# export PKG_CONFIG_PATH=/home/rgirdhar/Software/vision/opencv/install/lib/pkgconfig/:$PKG_CONFIG_PATH
 
 export PATH=$PATH:/usr/local/cuda-7.0/bin/
-export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/ashrivas/cv-libs/cuda-5.5/lib64/
+# export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/ashrivas/cv-libs/cuda-5.5/lib64/
 
 # alias python=ipython
 
@@ -606,3 +606,5 @@ export JAVA_HOME=$XHOME/jdk1.8.0_31
 export LIBC17="/home/rgirdhar/Software/vision/tensorflow/other_libs/libc6_2.17"
 alias tfpython="LD_LIBRARY_PATH=$LD_LIBRARY_PATH:\"$LIBC17/lib/x86_64-linux-gnu/:$LIBC17/usr/lib/x86_64-linux-gnu/\" /home/rgirdhar/Libs/ld-2.17.so /home/rgirdhar/Software/pl/python/anaconda2/bin/python"
 alias tensorboard="LD_LIBRARY_PATH=$LD_LIBRARY_PATH:\"$LIBC17/lib/x86_64-linux-gnu/:$LIBC17/usr/lib/x86_64-linux-gnu/\" /home/rgirdhar/Software/pl/python/anaconda2/bin/tensorboard"
+
+alias tfpython="export LIBC17=\"/home/rgirdhar/Software/vision/tensorflow/other_libs/libc6_2.17\"; export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:\"$LIBC17/lib/x86_64-linux-gnu/:$LIBC17/usr/lib/x86_64-linux-gnu/\"; /home/rgirdhar/Libs/ld-2.17.so  /home/rgirdhar/Software/pl/python/anaconda2/bin/python"
