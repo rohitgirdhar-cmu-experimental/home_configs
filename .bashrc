@@ -607,4 +607,4 @@ export LIBC17="/home/rgirdhar/Software/vision/tensorflow/other_libs/libc6_2.17"
 alias tfpython="LD_LIBRARY_PATH=$LD_LIBRARY_PATH:\"$LIBC17/lib/x86_64-linux-gnu/:$LIBC17/usr/lib/x86_64-linux-gnu/\" /home/rgirdhar/Libs/ld-2.17.so /home/rgirdhar/Software/pl/python/anaconda2/bin/python"
 alias tensorboard="LD_LIBRARY_PATH=$LD_LIBRARY_PATH:\"$LIBC17/lib/x86_64-linux-gnu/:$LIBC17/usr/lib/x86_64-linux-gnu/\" /home/rgirdhar/Software/pl/python/anaconda2/bin/tensorboard"
 
-alias tfpython="export LIBC17=\"/home/rgirdhar/Software/vision/tensorflow/other_libs/libc6_2.17\"; export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:\"$LIBC17/lib/x86_64-linux-gnu/:$LIBC17/usr/lib/x86_64-linux-gnu/\"; /home/rgirdhar/Libs/ld-2.17.so  /home/rgirdhar/Software/pl/python/anaconda2/bin/python"
+alias tfpython="LIBC17=\"/home/rgirdhar/Software/vision/tensorflow/other_libs/libc6_2.17\"; LD_LIBRARY_PATH=$LD_LIBRARY_PATH:\"$LIBC17/lib/x86_64-linux-gnu/:$LIBC17/usr/lib/x86_64-linux-gnu/\"; /home/rgirdhar/Libs/ld-2.17.so  /home/rgirdhar/Software/pl/python/anaconda2/bin/python"
